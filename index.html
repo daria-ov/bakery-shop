@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Modern bakery</title>
   </head>
 
@@ -10,30 +11,40 @@
     <header>
       <nav>
         <!-- logo -->
-        <a href="#">
+        <a href="index.html">
           <img src="img/logo.svg" alt="Logo of Modern bakery" />
         </a>
         <ul>
-          <li><a href="#" target="_blank"></a>Franchise</li>
-          <li><a href="#"></a>Our traditions</li>
-          <li><a href="#"></a>Chefs</li>
-          <li><a href="#"></a>Formats</li>
-          <li><a href="#"></a>Contacts</li>
+          <!-- <li><a href="#" target="_blank"></a>Franchise</li> -->
+          <li>
+            <a class="link" href="#tradition-section">Our traditions</a>
+          </li>
+          <li><a class="link" href="#chefs-section">Chefs</a></li>
+
+          <li><a class="link" href="#formats-section">Formats</a></li>
+          <li><a class="link" href="#contact-section">Contacts</a></li>
         </ul>
       </nav>
-      <button type="button">Request a call</button>
+      <button class="button" type="button">Request a call</button>
     </header>
     <main>
+
+      <section id="tradition-section"></section>
       <section>
-        <h1>Modern bakery</h1>
+        <h1 class="hero-title"><span class="accent">Modern</span> bakery</h1>
       </section>
+      <!-- щоб переходити на тій самій сторінці але до іншого блоку використовуємо id -->
+      <!-- <section id="tradition-section"></section>
+      <section id="chefs-section"></section>
+      <section id="formats-section"></section>
+      <section id="contact-section"></section> -->
       <section>
-        <ul>
+        <!-- <ul class="advantages-list"> селектор нащадка -->
           <li>High market demand</li>
           <li>Affordable formats</li>
           <li>Experienced management team</li>
         </ul>
-        <h2>New format of tradition</h2>
+        <h2 class="section-title">New format of tradition</h2>
         <p>
           <span>shop bakery</span> - this is a bakery that has taken the best of
           everything and preserved both the taste of traditional pastries and
@@ -48,6 +59,7 @@
           src="img/baker-man.jpg"
           alt="Baker man looks at the loaves with a smile"
         />
+        <section id="chefs-section"></section>
         <ul>
           <li>
             <article>
@@ -74,10 +86,11 @@
         </ul>
       </section>
       <section>
-        <h2>Our best chefs</h2>
+        <h2 class="section-title">Our <span class="accent">best chefs</span></h2>
       </section>
       <section>
-        <h2>Formats</h2>
+        <section id="formats-section"></section>
+        <h2 class="section-title">Formats</h2>
         <ul>
           <li>
             <article>Walrus</article>
@@ -87,25 +100,33 @@
             2 baker's assistants, 2 waiters-handymen Seats: available
           </p>
           <li><article>Horseshoe</article></li>
-          <p>
+          <!-- <p>
             Area: up to 25 m2 Menu: the most popular menu items Staff: 2
             cashiers, 2 bakers, 1 baker's assistant Seats: none
-          </p>
+          </p> -->
           <li><article>Handlebar</article></li>
         </ul>
-        <p>
+        <!-- <p>
           Area: up to 15 m2 Menu: the most popular menu items Staff: 1 seller, 1
           baker, 1 baker's assistant Seats: none
-        </p>
+        </p> -->
       </section>
       <section>
-        <h2>Join the network of bakeries</h2>
+        <h2 class="section-title">Join the network of bakeries</h2>
         <p>Fill out the form so we can contact you!</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.163630435278!2d30.488698376404077!3d50.456677571593396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCDQo9C60YDQsNGX0L3QsCwgMDIwMDA!5e0!3m2!1suk!2sbe!4v1750877549452!5m2!1suk!2sbe"
+          width="603"
+          height="595"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
     <footer>
       <nav>
-        <a href="#">
+        <a href="index.html">
           <!-- logo -->
           <img src="img/logo.svg" alt="Logo of Modern bakery" />
         </a>
@@ -113,14 +134,16 @@
         <ul>
           <li><a href="#" target="_blank"></a>Franchise</li>
           <li><a href="#"></a>Our traditions</li>
-          <li><a href="#"></a>Chefs</li>
+          <li><a href="#"></a>Our Chefs</li>
+
           <li><a href="#"></a>Formats</li>
           <li><a href="#"></a>Contacts</li>
         </ul>
       </nav>
+      <section id="contact-section"></section>
       <address>
         <ul>
-          <li><a href="tel:+ 380960000007">+ 38 (096) 000 00 07</a></li>
+          <li><a href="tel:+380960000007">+ 38 (096) 000 00 07</a></li>
           <li>
             <a href="mailto:shopbakery@gmail.com">shopbakery@gmail.com</a>
           </li>
