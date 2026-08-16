@@ -1,0 +1,33 @@
+/* Header */
+
+.header {
+  /* тоді хедер нав поверх картинки буде. він стає меншим і нам треба буде його прикріпити до верхньої лівої частини - топ0-лефт0-і розтягнути на всю ширини - width-100% */
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* РЕКОМЕНДУЄТСЯ ТРИМАТИ ЛЕФТ І ТОП ЗНАЧЕННЯ ПО НОЛЯМ А ЯКЩО ТРЕ ПІДІДВИНУТИ ЕЛЕМЕНТИ ТО ВИКОРИСТОРУВАТИ ПАДАНГ АБО МАРЖІН ТОП_РАЙТ і тд і тп */
+  padding-top: 32px;
+
+  &__container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 40px; /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+  }
+
+  &__nav {
+    display: flex;
+    /* flex-grow: 1; */
+    flex-grow: 1;
+    align-items: center;
+    gap: 40px; /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+  }
+
+  &__menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,26 @@
+/* Tradition section */
+
+.traditions-section {
+  padding-top: 96px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+    gap: 40px;
+  }
+
+  &__content {
+    max-width: 710px;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+  }
+  /* щоб не робити бр cuz text can be change so the ширина тексту також а ось з заданною шириною він буде завжи як треба  */
+  &__text {
+    &--limited {
+      max-width: 360px;
+    }
+  }
+}

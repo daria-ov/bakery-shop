@@ -1,0 +1,19 @@
+/* Advantage-section */
+
+.advantages-section {
+  background-color: var(--color-brand-normal);
+  padding: 16 0px;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+  }
+
+  &__item {
+    font-size: 20px;
+    color: var(--color-primary-light);
+    font-weight: 300;
+  }
+}

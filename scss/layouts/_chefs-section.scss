@@ -1,0 +1,55 @@
+/* Chef section */
+.chefs-section {
+  padding: 48px 0;
+
+  &__title {
+    position: relative;
+    max-width: 520px;
+
+    /* for make a 
+  title in the middle - O top, auto left n right, 80 bottom. we need to center it manually because of pseudo-element if not- jc - center */
+    margin: 0 auto 80px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 352px;
+    border: 2px solid var(--color-brand-light);
+    /* height: 2px; */ /* height is not needed cuz we use border */
+  }
+
+  &::before {
+    position: absolute;
+    /* не рекомендовано працювати з фіксованими відстанями */
+    left: -360px;
+    bottom: 24px;
+  }
+
+  &::after {
+    position: absolute;
+    right: -360px;
+    bottom: 24px;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px 30px; /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page. ДОДАЛИ 40 також in the row - по горизонталі між кухарями на випадок якщо кухарі будуть потім додаватись*/
+    /* якщо кухарі будуть ще додаватись вони будусь гарно по 2 наприклад на лінії а не стискатись по  4 на одному ряду
+  ОБОВЛЯЗКОВО ПЕРЕВІРЯЙ ЦЮ ВЛАСТИВІСТЬ */
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: calc(
+      (100% - 30px) / 2
+    ); /* 2 items in a row щоб зайняли порівну місце + відстань між двома картами по 20px*/
+  }
+}

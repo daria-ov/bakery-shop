@@ -1,0 +1,24 @@
+.section {
+  padding: 48px 0;
+}
+.section-title .accent {
+  color: var(--color-brand-dark);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.section-title.centered {
+  text-align: center;
+}
+/* check at the figma layout grids */
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 24px; /* Add padding to the container -24+24 = 48, than add this to min-width 1240 + 48 = 1288 cuz we put box-sizing which is not include padding */
+}

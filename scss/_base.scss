@@ -1,0 +1,50 @@
+:root {
+  --color-primary-dark: #31261a; /*HEX value*/
+  --color-primary-light: #faf4ea;
+  --color-secondary-dark: #a28268; /*HEX value*/
+  --color-brand-dark: #465929;
+  --color-brand-normal: #819b57;
+  --secondary-color: #819b57;
+  --color-brand-light: #cfcfbc; /* Added secondary color */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+/* щоб не було італіків за замовчуванням */
+address {
+  font-style: normal;
+}
+
+a {
+  /* корисно зробити для всіх посилань! бо вони за замовчуванням інлайнові, якщо блокові ставимо - тоді він розтягується на всю ширину елемента, а так і-б все ок і можна змінювати розміри  */
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+

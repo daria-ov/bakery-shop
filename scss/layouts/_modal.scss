@@ -1,0 +1,46 @@
+/* Modal */
+
+.backdrop {
+  /* розтягнутий на всю ширину вікна */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* transition-display 1s не буде переходу бо не всі властивості є анімованими і краще писати як нижче */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  /* навіть якщо буде екран менший то все буде вміщатися якшо ставить стопроц і ман-макс-хейт */
+  max-height: 880px;
+  padding: 128px;
+  /* width: 800px;
+  height: 800px; */
+  background-color: var(--color-primary-light);
+  border-radius: 32px;
+  overflow-y: auto;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  /* коли у мого модального вікна шс-хідден в js то ми його ховаємо - дісплей-нон */
+  display: none;
+  /* це на випадок якщо ми хочемо анімоване вікно модальне - бо з дісплей нон анімація не працює opacity: 0;
+visibility: hidden;
+pointer-events: none; */
+}
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}

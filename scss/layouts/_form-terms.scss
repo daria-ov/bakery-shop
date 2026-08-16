@@ -1,0 +1,106 @@
+/* Form */
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  width: 100%;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  /* трансперет - і лінії вводу не білі за замовчуваням а під колір фону наприклад */
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--color-brand-normal);
+  /* при наведенні на label name наприклад змінюється колір */
+  /* аби при наведенні змінювався колір бордеру використовуємо цю властивість аутлайн */
+  outline: none;
+}
+/* 1.ЗВЕРНИ УВАГУ, що плейсхолдер це псевдоелемент а не псевдоклас (2 квокрапки) */
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px; /* розмір шрифту для лейблів. пишемо тут вручну бо в body наслідуєтьс 18px за замовчування, тому ми змінюємо*/
+  line-height: 1.17;
+}
+.form-input:focus::placeholder {
+  /* при переході в формі ім я темнішає */
+  color: var(--color-primary-dark);
+}
+
+.form-input:disabled {
+  border-color: lightgray;
+}
+
+.form-input:disabled::placeholder {
+  color: lightgray;
+}
+
+/* 2. ЩЕ ОДИН ВАРІК ЯК ОТ ЩОБ НЕЙМ-МЕЙЛ-ТЕЛ взлітало над input-field */
+/* .form-input:focus + .form-label {
+  /* при фокусі на інпуті лейбл піднімається вверх */
+/* transform: translate(-36px, -40px); */
+/* } */
+/* .form-field:focus-within + .form-label { */
+/* фокус-визин використовується рідко  */
+/* при фокусі на інпуті лейбл піднімається вверх */
+/* transform: translate(-36px, -40px);
+} */
+.form-label {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+  /* 2 варік.плавний перехід при фокусі на інпуті, name tel mail летить плавно вверх
+  transition: transform 0.3s; */
+  /* display: block; */ /* display block був перший варік як зробити і не потрібен бо ми використовуємо position absolute і вже воно там йде за замовчуванням.*/
+}
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-button {
+  display: block;
+  margin: 0 auto 24px;
+  margin-top: 20px; /* щоб кнопка була по центру. але просто так вона не буде працювати, бо працює тільки для блокових елементів. в dev-tools якщо в computed глянути -кнопка inline-block. Також додаємо 24px нижній відступ */
+}
+.form-terms {
+  margin: 0 auto;
+  max-width: 220px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-terms-link {
+  color: var(--color-primary-dark);
+  text-underline-offset: 3px;
+}
+
+/* НА ВИПАДОК ЯКЩО ТРЕБА БУДЕ ЗРОБИТИ ЧЕКБОКС ЧЕРЕЗ БИФОР ЩОБ СТИЛІЗУВАТИ В CSS */
+
+/* .checkbox-label {
+  position: relative;
+}
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  /* background-images: url(../img/checkbox-checked.svg); */
+/* або просто змінити колір кубіка як нижче */
+/* background-color: var(--color-primary-dark);
+}
+.checkbox-label {
+  padding-left: 24px;
+}
+.checkbox-label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  border: 1px solid var(--color-brand-dark);
+  border-radius: 2px;
+  content: "";
+} */

@@ -1,0 +1,30 @@
+/* Carousel */
+.carousel-button.next {
+  transform: rotate(180deg);
+}
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* prevent shrinking */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--color-primary-dark);
+  background-color: transparent;
+  border: 1px solid var(--color-primary-dark);
+  /* for make icon colored наслідується для стілки хоч ми і пишемо тут у кнопці */
+  cursor: pointer;
+}
+.carousel-button:hover {
+  background-color: var(--color-primary-dark);
+  fill: var(--color-primary-light); /* for make icon colored */
+}
+
+/* .carousel-arrow {
+  fill: var(--color-primary-dark);
+} */
+/* саме така консрукція бо ховер до кнопки перш за все а після вже до стрілочки */
+/* .carousel-button:hover .carousel-arrow {
+  fill: var(--color-primary-light); */
+/* } */

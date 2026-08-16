@@ -1,0 +1,13 @@
+/* Link on nav */
+
+.link {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  line-height: 1.5;
+  font-weight: 400;
+  /* ЗАВЖДИ ЗАСТОСООВУЄМО ПЕРЕХІД І ЕЛЕМЕНТІ ДО ЯКОГО ХОЧЕМО ЗАСТОСУВАТИ а не в ховері */
+  transition: color 0.3s;
+}
+.link:hover {
+  color: var(--color-brand-normal);
+}
