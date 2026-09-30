@@ -2,18 +2,40 @@
 
 .advantages-section {
   background-color: var(--color-brand-normal);
-  padding: 16 0px;
+  padding: 20px 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 16px 0;
+  }
 
   &__list {
     display: flex;
-    justify-content: space-around;
-    gap: 40px;
-    /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 40px;
+    }
   }
 
   &__item {
-    font-size: 20px;
+    font-size: 15px;
     color: var(--color-primary-light);
     font-weight: 300;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      font-size: 20px;
+    }
   }
 }

@@ -1,28 +1,52 @@
 /* Formats */
 .formats-container {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   align-items: center;
-  /* to put btn-arrons in the vertical axe in the middle */
+  justify-content: center;
+
+  @media screen and (min-width: $bp-desktop) {
+    gap: 32px;
+  }
+
+  .carousel-button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+    }
+  }
 }
+
 .formats-list {
   display: flex;
+  flex-direction: column;
   gap: 20px;
-  flex-wrap: wrap; /* щоб елементи не виходили за межі контейнера  і переходили гарно на новий рчдок з однаковою шириною картки*/
+  width: 100%;
+
+  @media screen and (min-width: $bp-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .formats-item {
-  flex-basis: calc(
-    (100% - 40px) / 3
-  ); /* 3 items in a row щоб зайняли порівну місце + відстань між двома картами по 20px*/
+  width: 100%;
+  flex-basis: 100%;
   display: flex;
+
+  @media screen and (min-width: $bp-desktop) {
+    flex-basis: calc((100% - 40px) / 3);
+  }
 }
+
 .format-card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 444px;
+  width: 100%;
+  height: 360px;
   background: linear-gradient(
     180deg,
     rgba(49, 38, 26, 0) 55.21%,
@@ -32,10 +56,14 @@
   border-radius: 16px;
   padding: 24px;
   transition: transform 0.3s;
-}
 
-.format-card:hover {
-  transform: scale(1.05);
+  @media screen and (min-width: $bp-tablet) {
+    height: 444px;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
 }
 
 .format-image {
@@ -45,17 +73,24 @@
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   z-index: -1;
 }
 
 .formats-title {
-  margin-bottom: 80px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: $bp-desktop) {
+    margin-bottom: 80px;
+  }
 }
+
 .format-title {
   font-size: 24px;
   font-weight: 600;
   color: var(--color-primary-light);
 }
+
 .format-text {
   font-size: 14px;
   font-weight: 300;

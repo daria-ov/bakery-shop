@@ -2,7 +2,7 @@
 
 ## Description
 
-A modern bakery website with a clean, stylish design. This project features a responsive layout, animated sections, and a premium user experience.
+A modern bakery website with a clean. This project features a responsive layout, animated sections, and a premium user experience.
 
 ## Features
 

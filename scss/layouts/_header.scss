@@ -6,28 +6,46 @@
   left: 0;
   top: 0;
   width: 100%;
-  /* РЕКОМЕНДУЄТСЯ ТРИМАТИ ЛЕФТ І ТОП ЗНАЧЕННЯ ПО НОЛЯМ А ЯКЩО ТРЕ ПІДІДВИНУТИ ЕЛЕМЕНТИ ТО ВИКОРИСТОРУВАТИ ПАДАНГ АБО МАРЖІН ТОП_РАЙТ і тд і тп */
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
-    gap: 40px; /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      gap: 40px;
+    }
   }
 
   &__nav {
     display: flex;
-    /* flex-grow: 1; */
-    flex-grow: 1;
     align-items: center;
-    gap: 40px; /* gap between logo and nav comme ça ils vont pas se coller lorqu'on reduit la taille du page*/
+    gap: 16px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-grow: 1;
+      gap: 40px;
+    }
   }
 
   &__menu {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 40px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    @media screen and (min-width: 1400px) {
+      gap: 64px;
+    }
   }
 }

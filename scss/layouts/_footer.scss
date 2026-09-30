@@ -7,14 +7,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 32px 0;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 48px 0;
+  }
 }
 
 .footer::before,
 .footer::after {
+  display: none;
   position: absolute;
   bottom: 0;
   background-repeat: no-repeat;
   content: "";
+
+  @media screen and (min-width: $bp-desktop) {
+    display: block;
+  }
 }
 
 .footer::before {
@@ -30,16 +40,41 @@
   right: 0;
   background-image: url("../img/decor-bread-small.png");
 }
+
 .footer-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+
+  @media screen and (min-width: $bp-desktop) {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+  }
 }
 
 .footer-address,
 .footer-nav {
   display: flex;
-  /* to fill a half of  space of footer */
-  flex-basis: 50%;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+
+  @media screen and (min-width: $bp-tablet) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    flex-basis: 50%;
+    justify-content: flex-start;
+    gap: 20px;
+  }
 }
 
 .footer-logo,
@@ -47,9 +82,21 @@
   flex-grow: 1;
 }
 
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .address-list,
 .address-info {
   flex-grow: 1;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .address_link {

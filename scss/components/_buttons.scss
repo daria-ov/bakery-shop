@@ -1,12 +1,20 @@
 /* Button */
 .button {
-  padding: 16px 32px;
+  padding: 10px 18px;
+  font-size: 14px;
   color: var(--color-primary-light);
   font-weight: 600;
   background-color: var(--color-brand-normal);
   border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.3s, background-color 0.3s;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 16px 32px;
+    font-size: 18px;
+  }
 }
 /* disabled - не дає нажати на кнопу пока не заповниш все як треба. краще використ як псевдоклас а не в квадратних дужках як js. такий синтаксис більш рекомендований */
 /* .button:disabled {

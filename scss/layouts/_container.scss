@@ -3,5 +3,9 @@
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
-  padding: 24px; /* Add padding to the container -24+24 = 48, than add this to min-width 1240 + 48 = 1288 cuz we put box-sizing which is not include padding */
+  padding: 0 16px;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 0 24px;
+  }
 }
